@@ -8,8 +8,14 @@
 secret_num = 88
 
 while True:
-    print("請輸入想猜的數字(1~100)")
-    num = int(input())
+    try:
+        print("請輸入想猜的數字(1~100)")
+        num = int(input())
+
+    except ValueError:
+        print("請輸入數字")
+        continue
+
     if num == secret_num:
         print("恭喜中獎")
         break
